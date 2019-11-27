@@ -1,0 +1,34 @@
+Rodando
+java -jar selenium-server-standalone-2.46.0.jar
+
+Instalação
+==========================================================
+Robot Framework - Instalação
+Instalar Python 2.7 e PIP 
+sudo apt-get install python2.7 python-pip
+OBS: O Python já está como default instalado no Linux. Para verificar a versão que está instala na sua máquina, execute o comando no terminal "python --version"
+OBS2: Utilize o Python 2.7. Em versões superiores, como 3.0, temos alguns problemas com algumas bibliotecas do Robot.
+
+Instalar Robotframework 
+sudo pip install -U robotframework
+
+Instalar bibliotecas do Python e RobotFramework
+sudo pip install -U requests
+sudo pip install -U pyyaml
+sudo pip install -U pymysql link
+sudo pip install -U robotframework-databaselibrary link
+sudo pip install -U robotframework-requests link
+sudo pip install -U robotframework-selenium2library link
+sudo pip install -U robotframework-extendedselenium2library link
+sudo pip install -U robotframework-angularjs link
+sudo pip install -U robotframework-httplibrary link
+
+
+Extensões para VSCode
+==========================================================
+
+Robot Framework Intellisense by Tomi Turtiainen
+robot framework language by keith
+robotframework by Ville M. Vainio
+RobotF Extension by KMK Labs
+

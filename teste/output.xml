@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20191127 11:07:24.055" generator="Robot 3.1.2 (Python 2.7.15+ on linux2)">
+<suite source="/home/11251858724/cursos/udemy/robot-framework/teste/teste.robot" id="s1" name="Teste">
+<test id="s1-t1" name="Pesquisar no google a palavra RobotFramework usando o chrome">
+<kw name="Pesquisar no google usando o navegador" library="resourcePesquisa">
+<doc>Pesquisa no google o texto do argumento</doc>
+<arguments>
+<arg>RobotFramework</arg>
+<arg>chrome</arg>
+</arguments>
+<kw name="Abrir a pagina de pesquisa no navegador" library="resourcePesquisa">
+<arguments>
+<arg>${BROWSER}</arg>
+</arguments>
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${SERVER}</arg>
+<arg>${BROWSER}</arg>
+<arg>None</arg>
+<arg>http://127.0.0.1:4444/wd/hub</arg>
+</arguments>
+<msg timestamp="20191127 11:07:24.136" level="INFO">Opening browser 'chrome' to base url 'http://www.google.com.br' through remote server at 'http://127.0.0.1:4444/wd/hub'.</msg>
+<status status="PASS" endtime="20191127 11:07:27.794" starttime="20191127 11:07:24.135"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20191127 11:07:27.910" starttime="20191127 11:07:27.794"></status>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" endtime="20191127 11:07:27.911" starttime="20191127 11:07:27.911"></status>
+</kw>
+<status status="PASS" endtime="20191127 11:07:27.912" starttime="20191127 11:07:24.135"></status>
+</kw>
+<kw name="Pagina de pesquisa do google deve estar aberta" library="resourcePesquisa">
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>Google</arg>
+</arguments>
+<msg timestamp="20191127 11:07:28.233" level="INFO">Page title is 'Google'.</msg>
+<status status="PASS" endtime="20191127 11:07:28.233" starttime="20191127 11:07:27.913"></status>
+</kw>
+<status status="PASS" endtime="20191127 11:07:28.234" starttime="20191127 11:07:27.912"></status>
+</kw>
+<kw name="Inserir na pesquisa o texto" library="resourcePesquisa">
+<arguments>
+<arg>${texto}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>q</arg>
+</arguments>
+<status status="PASS" endtime="20191127 11:07:28.592" starttime="20191127 11:07:28.235"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>q</arg>
+<arg>${texto}</arg>
+</arguments>
+<msg timestamp="20191127 11:07:28.593" level="INFO">Typing text 'RobotFramework' into text field 'q'.</msg>
+<status status="PASS" endtime="20191127 11:07:29.722" starttime="20191127 11:07:28.593"></status>
+</kw>
+<status status="PASS" endtime="20191127 11:07:29.722" starttime="20191127 11:07:28.234"></status>
+</kw>
+<kw name="Clicar no botao de Pesquisa Google" library="resourcePesquisa">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>Pesquisa Google</arg>
+</arguments>
+<msg timestamp="20191127 11:07:29.722" level="INFO">Clicking button 'Pesquisa Google'.</msg>
+<status status="PASS" endtime="20191127 11:07:32.424" starttime="20191127 11:07:29.722"></status>
+</kw>
+<status status="PASS" endtime="20191127 11:07:32.425" starttime="20191127 11:07:29.722"></status>
+</kw>
+<kw name="Aguardo aparecer o resultado da pesquisa" library="resourcePesquisa">
+<arguments>
+<arg>${texto}</arg>
+</arguments>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>${texto}</arg>
+</arguments>
+<status status="PASS" endtime="20191127 11:07:32.787" starttime="20191127 11:07:32.426"></status>
+</kw>
+<status status="PASS" endtime="20191127 11:07:32.788" starttime="20191127 11:07:32.425"></status>
+</kw>
+<status status="PASS" endtime="20191127 11:07:32.788" starttime="20191127 11:07:24.135"></status>
+</kw>
+<kw name="Visualizar imagens da pesquisa" library="resourcePesquisa">
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>Imagens</arg>
+</arguments>
+<msg timestamp="20191127 11:07:32.789" level="INFO">Clicking link 'Imagens'.</msg>
+<status status="PASS" endtime="20191127 11:07:35.281" starttime="20191127 11:07:32.789"></status>
+</kw>
+<status status="PASS" endtime="20191127 11:07:35.282" starttime="20191127 11:07:32.788"></status>
+</kw>
+<kw name="Fechar Browser" library="resourcePesquisa">
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20191127 11:07:36.157" starttime="20191127 11:07:35.283"></status>
+</kw>
+<status status="PASS" endtime="20191127 11:07:36.157" starttime="20191127 11:07:35.282"></status>
+</kw>
+<status status="PASS" endtime="20191127 11:07:36.158" critical="yes" starttime="20191127 11:07:24.134"></status>
+</test>
+<doc>Suite de testes integrados de tela
+
+Os casos de teste sao importados
+dos arquivos de resource.</doc>
+<status status="PASS" endtime="20191127 11:07:36.159" starttime="20191127 11:07:24.056"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Teste" pass="1">Teste</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

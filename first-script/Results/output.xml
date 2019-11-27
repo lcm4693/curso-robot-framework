@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20191127 19:00:24.724" generator="Robot 3.1.2 (Python 2.7.15+ on linux2)">
+<suite source="/home/11251858724/cursos/udemy/robot-framework/first-script/Tests/first-test.robot" id="s1" name="First-Test">
+<test id="s1-t1" name="User must sign in to check out">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${URL_TEST}</arg>
+<arg>chrome</arg>
+<arg>None</arg>
+<arg>${SERVER_SELENIUM}</arg>
+</arguments>
+<msg timestamp="20191127 19:00:24.798" level="INFO">Opening browser 'chrome' to base url 'https://www.mercadolivre.com.br/' through remote server at 'http://127.0.0.1:4444/wd/hub'.</msg>
+<status status="PASS" endtime="20191127 19:00:27.292" starttime="20191127 19:00:24.797"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Ofertas</arg>
+</arguments>
+<status status="PASS" endtime="20191127 19:00:27.388" starttime="20191127 19:00:27.292"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=as_word</arg>
+<arg>Assimil Alemão</arg>
+</arguments>
+<msg timestamp="20191127 19:00:27.388" level="INFO">Typing text 'Assimil Alemão' into text field 'name=as_word'.</msg>
+<status status="PASS" endtime="20191127 19:00:27.608" starttime="20191127 19:00:27.388"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>//button[@class='nav-search-btn']</arg>
+</arguments>
+<msg timestamp="20191127 19:00:27.608" level="INFO">Clicking button '//button[@class='nav-search-btn']'.</msg>
+<status status="PASS" endtime="20191127 19:00:28.678" starttime="20191127 19:00:27.608"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>resultados</arg>
+</arguments>
+<status status="PASS" endtime="20191127 19:00:28.756" starttime="20191127 19:00:28.678"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>css=#MLB1264956123 &gt; div &gt; div &gt; div.carousel &gt; ul &gt; li &gt; a</arg>
+</arguments>
+<msg timestamp="20191127 19:00:28.757" level="INFO">Clicking link 'css=#MLB1264956123 &gt; div &gt; div &gt; div.carousel &gt; ul &gt; li &gt; a'.</msg>
+<status status="PASS" endtime="20191127 19:00:29.985" starttime="20191127 19:00:28.757"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Voltar à lista</arg>
+</arguments>
+<status status="PASS" endtime="20191127 19:00:30.105" starttime="20191127 19:00:29.985"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@value='Adicionar ao carrinho']</arg>
+</arguments>
+<msg timestamp="20191127 19:00:30.106" level="INFO">Clicking button '//input[@value='Adicionar ao carrinho']'.</msg>
+<status status="PASS" endtime="20191127 19:00:31.210" starttime="20191127 19:00:30.105"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>//h2[@class='auth-title notRegistered']</arg>
+</arguments>
+<msg timestamp="20191127 19:00:31.305" level="INFO">Current page contains element '//h2[@class='auth-title notRegistered']'.</msg>
+<status status="PASS" endtime="20191127 19:00:31.306" starttime="20191127 19:00:31.211"></status>
+</kw>
+<kw name="Element Text Should Be" library="Selenium2Library">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>//h2[@class='auth-title notRegistered']</arg>
+<arg>Olá! Para adicionar ao carrinho, acesse a sua conta</arg>
+</arguments>
+<msg timestamp="20191127 19:00:31.306" level="INFO">Verifying element '//h2[@class='auth-title notRegistered']' contains exact text 'Olá! Para adicionar ao carrinho, acesse a sua conta'.</msg>
+<status status="PASS" endtime="20191127 19:00:31.331" starttime="20191127 19:00:31.306"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20191127 19:00:33.331" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20191127 19:00:33.331" starttime="20191127 19:00:31.331"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20191127 19:00:33.895" starttime="20191127 19:00:33.332"></status>
+</kw>
+<doc>This is some basic about the Test</doc>
+<status status="PASS" endtime="20191127 19:00:33.896" critical="yes" starttime="20191127 19:00:24.797"></status>
+</test>
+<doc>This is some basic info about the whole suite</doc>
+<status status="PASS" endtime="20191127 19:00:33.898" starttime="20191127 19:00:24.725"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="First-Test" pass="1">First-Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
