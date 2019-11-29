@@ -11,7 +11,7 @@ Test Teardown    Finalizar Teste
 *** Test Case ***
 Adicionar livro no mercado livre
     [Documentation]                  This is a test for locators
-    Buscar pelo produto
-    Escolher o produto
+    Buscar pelo produto              iphone 8
+    Escolher o produto               Apple iPhone 8 64 GB Cinza-espacial
     Adicionar Produto ao carrinho
 
