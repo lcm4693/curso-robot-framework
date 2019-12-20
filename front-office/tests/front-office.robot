@@ -12,11 +12,16 @@ Test Teardown   Fechar o navegador
 Should be able to access "Team" page
     [Documentation]     Teste que verifica se é possível acessar a página "Team"
     [Tags]  Teste 1
-    Log     Executing Teste 1
-    Sleep   2s
+    # Log     Executing Teste 1
+    Ir para pagina inicial
+    Ir para Team Page
+    # Sleep   2s
 
 Team page should match requirements
     [Documentation]     Teste que verifica se a página "Team" está ok
     [Tags]  Teste 2
-    Log     Executing Teste 2
-    Sleep   2s
+    # Log     Executing Teste 2
+    # Sleep   2s
+    Ir para pagina inicial
+    Ir para Team Page
+    Validar pagina Team 
